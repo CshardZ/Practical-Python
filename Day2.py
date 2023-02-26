@@ -5,6 +5,7 @@ def convert_add(str_num_list):
 llist =  ['1','3', '5']
 print(convert_add(llist))
 
+
 # Extra
 def check_duplicates(llist):
 	from collections import Counter
@@ -12,4 +13,14 @@ def check_duplicates(llist):
 	print(set([fruit for fruit in fruits if temp[fruit]>1 ]))
 
 fruits = ['apple', 'orange', 'bannana', 'apple','bannana','cake','cake','ice']
+check_duplicates(fruits)
+
+
+# Using set comprehension instead of list
+def check_duplicates2(llist):
+	from collections import Counter
+	temp = Counter(fruits)
+	print({fruit for fruit in fruits if temp[fruit]>1})
+
+	fruits = ['apple', 'orange', 'bannana', 'apple','bannana','cake','cake','ice']
 check_duplicates(fruits)
