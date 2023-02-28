@@ -4,7 +4,7 @@ def my_discount():
 	
 	price = float(input("Enter price: "))
 	disc = float(input("Enter discount(%): "))
-  f_price = price - (price*disc/100)
+  	f_price = price - (price*disc/100)
 	return f"Final pricee: {f_price}"
 
 print(my_discount())
