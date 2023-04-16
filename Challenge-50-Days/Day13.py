@@ -1,8 +1,19 @@
 from emoji import emojize
 
 #  Challenge-11
+def your_vat():
+    while True:
+        try:
+            price, vat = int(input("Enter price: ")), float(input("Enter VAT Rate: "))
+            break
+        except:
+            print("\nPlease enter valid price and VAT Rate(Percentage)")
 
-def your_vat():🤢🥴
+    return f"Total price: { price + price*(vat/100) }"
+
+print(your_vat())
+
+def your_vat2():🤢😵
     print("\n\n\n")
     try:
         price, vat = int(input("Enter price: ")), float(input("Enter VAT Rate: "))
@@ -16,11 +27,11 @@ def your_vat():🤢🥴
         
     return f"Total price: { price + price*(vat/100) }"
 
-#print(your_vat())
+print(your_vat2())
 
 # Extra
 def test(rng):
     for  i in range(rng):
         print(emojize(":snake:")*i,'\n')
 
-print(test(7))
+print(test(7))\
