@@ -26,20 +26,23 @@ print(flat_list([[2,4,5,6],[4,5]])) #[2, 4, 5, 6, 4, 5]
 def your_salary():
     name = input("Enter teacher's name: ")
     periods = int(input("Total period taken in month: "))
+    rate = float(input("Enter rate per period: "))
     if periods<=100:
-        sal = 100*20
+        sal = 100*rate
     else:
         overtime = periods - 100
-        sal = (100*20) + (overtime*25)
+        sal = (100*rate) + (overtime*25)
     return f"""
     Teacher: {name}, Periods: {periods}
-    Gross salary:${sal}"""
+    Gross salary:${sal:,}"""
 
 print(your_salary())
 """
-Enter teacher's name: JeffGates
+Enter teacher's name: Jeff Gates
 Total period taken in month: 105
+Enter rate per period: 20
 
-    Teacher: JeffGates, Periods: 105
-    Gross salary:$2125
+    Teacher: Jeff Gates, Periods: 105
+    Gross salary:$2,125.0
+
 """
