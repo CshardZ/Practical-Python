@@ -4,7 +4,7 @@ from datetime import datetime
 
 class Notes:
     def __init__(self) -> None:
-        self.default_path = "C:/Users/Neha/Desktop/"
+        self.default_path = "Your Path Goes Here(Desktop Path preffered)"
         self.current_working_directory = self.default_path
         self.working_file = None
         self.recently_created = None
